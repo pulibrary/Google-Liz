@@ -4,50 +4,98 @@ body, input, button {
     color: #202124;
 }
 
-/* Google Logo */
+/* Flex container defined for the entire webpage*/
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Flex items defined for top links only */
+.top-nav {
+    display: flex;
+    padding: 6px;
+}
+
+.nav-links {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    color: #202124;
+}
+
+.nav-links2 {
+    /* float: right; */
+    padding: 5px;
+    margin: 0 5px;
+    color: #202124;
+}
+
+:not(a:hover) {
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-underline-position: below;
+}
+
+.footer-links {
+    color: #70757a;
+}
+
+
+.search-icon {
+    color:gray
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px
+}
+
+textarea.search-bar {
+    font-family: Roboto,arial,sans-serif;
+    line-height: 22px;
+    margin-bottom: 8px;
+    overflow-x: hidden;
+}
+
+.search-bar {
+    resize: none;
+    background-color: transparent;
+    /* border: none; */
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
+/* Google Logo
 .lnXdpd{
-    max-height:100%;
+    max-height:50%;
     max-width:100%;
     object-fit:contain;
     object-position:center bottom;
     width:auto
 }
 
-/* search box */
-.om7nvf{padding:20px}
-
-/* Flex column alignment */
-.L3eUgb {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 
 /* square of circles */
-.circle-squares {
-    background-color: red;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    line-height: normal;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 4px;
-    padding-left: 4px;
-}
+/* .circle-squares {
+    display: flexbox;
+}  */
 
 
-/* carbon neutral footer */
-.KxwPGc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-@media only screen and (max-width: 1200px) {
-    .KxwPGc {
-        justify-content: space-evenly;
-    }
-}
 
 /* .spch-dlg{background:transparent;border:none}
 .spch{background:#fff;height:100%;left:0;opacity:0;overflow:hidden;position:fixed;text-align:left;top:0;visibility:hidden;width:100%;z-index:10000;transition:visibility 0s linear 0.218s,background-color 0.218s;}
