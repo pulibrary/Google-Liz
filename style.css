@@ -1,39 +1,21 @@
 body, input, button {
     font-size: 14px;
-    font-family: Roboto,arial,sans-serif;
+    font-family: Roboto, arial, sans-serif;
     color: #202124;
 }
 
-/* Flex container defined for the entire webpage*/
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+/* *** Top nav styling *** */
 
-/* Flex items defined for top links only */
-.top-nav {
-    display: flex;
-    padding: 6px;
-}
 
-.nav-links {
-    display: inline-block;
-    padding: 5px;
-    margin: 0 5px;
-    color: #202124;
-}
 
-.nav-links2 {
-    /* float: right; */
-    padding: 5px;
-    margin: 0 5px;
-    color: #202124;
-}
+/* *** Search bar styling *** */
 
-:not(a:hover) {
+
+
+
+/* *** Links styling *** */
+a:not(:hover) {
     text-decoration: none;
-
 }
 
 a:hover {
@@ -44,111 +26,120 @@ a:hover {
     color: #70757a;
 }
 
+.nav-links {
+    padding: 5px;
+    color: #202124;
+}
+
+
+/* *** Other styling *** */
+.Google-logo-container, .footer-header{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+/* div {
+    display: block;
+} */
+
+/* Flex items defined for top links only */
+.top-nav-container {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+/* .nav-links-right {
+    display: inline-block;
+    flex-grow: 1;
+    flex-direction: row;
+} */
+
+
+.search-container {
+    background-color: aquamarine;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* .nav-link2 {
+    margin-right: auto;
+} */
+
+
+/* .nav-link3, .nav-link4, .nav-link5 {
+    align-self: flex-end;
+} */
+
 
 .search-icon {
-    color:gray
-    display: inline-block;
-    fill: currentColor;
+    color:gray;
+    /* display: inline-block; */
+    /* fill: currentColor; */
     height: 24px;
-    line-height: 24px;
-    position: relative;
+    /* line-height: 24px; */
+    /* position: relative; */
     width: 24px
 }
 
-textarea.search-bar {
-    font-family: Roboto,arial,sans-serif;
-    line-height: 22px;
-    margin-bottom: 8px;
-    overflow-x: hidden;
+.camera-icon {
+    transform: scale(0.20);
 }
 
-.search-bar {
-    resize: none;
-    background-color: transparent;
-    /* border: none; */
-    margin: 0;
-    padding: 0;
-    color: rgba(0,0,0,.87);
-    word-wrap: break-word;
-    outline: none;
+.text-area-container {
     display: flex;
-    -webkit-tap-highlight-color: transparent;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 6px;
 }
 
 
+/* *** Footer styling ***  */
 
-
-
-/* Google Logo
-.lnXdpd{
-    max-height:50%;
-    max-width:100%;
-    object-fit:contain;
-    object-position:center bottom;
-    width:auto
+.footer-container {
+    background-color: #f2f2f2;
+    padding: 0 20px;
 }
 
-
-/* square of circles */
-/* .circle-squares {
-    display: flexbox;
-}  */
-
-
-
-
-/* .spch-dlg{background:transparent;border:none}
-.spch{background:#fff;height:100%;left:0;opacity:0;overflow:hidden;position:fixed;text-align:left;top:0;visibility:hidden;width:100%;z-index:10000;transition:visibility 0s linear 0.218s,background-color 0.218s;}
-.s2fp.spch{opacity:1;transition-delay:0s;visibility:visible;}
-.close-button{background:none;border:none;color:#70757a;cursor:pointer;font-size:26px;right:0;line-height:15px;opacity:.6;margin:-1px -1px 0 0;padding:0 0 2px 0;height:48px;width:48px;position:absolute;top:0;z-index:10}
-.close-button:hover{opacity:.8}
-.close-button:active{opacity:1}
-.spchc{display:block;height:42px;pointer-events:none;margin:auto;position:relative;top:0;margin-top:312px;max-width:572px;min-width:534px;padding:0 223px}
-.inner-container{height:100%;opacity:.1;pointer-events:none;width:100%;transition:opacity .318s ease-in}
-.s2ml .inner-container,.s2ra .inner-container,.s2er .inner-container{opacity:1;transition:opacity 0s}
-.google-logo{background:url(data:image/png;base64,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) no-repeat center;background-size:94px 32px;height:32px;width:94px;top:8px;opacity:0;float:right;left:255px;pointer-events:none;position:relative;transition:opacity .5s ease-in,left .5s ease-in} */
-
-
-
-
-
-/* Extra notes: */
-
-/* .rSk4se{max-height:92px;position:relative}
-
-.L3eUgb{
-    display:flex;
-    flex-direction:column;
-    height:100%
+.footer-container, .footer-header, .footer-links-left, .footer-links-right {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.o3j99{
-    flex-shrink:0;
-    box-sizing:border-box
+/* @media only screen and (max-width: 1200px) {
+    .footer-header {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
+} */
+
+.footer-header {
+    justify-content: center;
 }
 
-.n1xJcf{
-    height:60px;
+.footer-links {
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
 }
 
-.LLD4me{
-    min-height:150px;
-    max-height:290px;
-    height:calc(100% - 560px);
+.footer-links-left {
+    display: flex;
+    flex-wrap: wrap;
 }
-    
-.yr19Zb{min-height:92px}
 
-.ikrT4e{max-height:160px}
+.footer-links-right {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.mwht9d{position:absolute;left:-1000px}
-
-.ADHj4e{padding-top:0px;padding-bottom:85px}
-
-.oWyZre{width:100%;height:500px;border-width:0}
-
-.qarstb{flex-grow:1}
-
-.QukL6{width:100%;position:fixed;bottom:0;z-index:2000}
-
-.hK6IXc{position:fixed;bottom:0;padding-top:100px} */
+/* This is good */
+.footer-leaf-image {
+    height: 14px;
+    margin-right: 6px;
+}
