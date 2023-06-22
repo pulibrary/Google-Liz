@@ -4,13 +4,321 @@ body, input, button {
     color: #202124;
 }
 
-/* *** Top nav styling *** */
+body, html {
+    margin: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+}
 
+a:-webkit-any-link {
+    cursor: pointer;
+    color: #202124;
+}
+
+.top-nav-container, .Google-logo-container, .search-container, .footer-container {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* *** Top nav styling *** */
+/* Flex items defined for top links only */
+.top-nav-container {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.nav-links-left {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    color: #202124;
+}
+
+.nav-links-left:first-of-type {
+    margin-left: 15px;
+}
+
+.nav-container-right {
+    display: flex;
+    padding: 0 4px;
+    align-items: center;
+    box-sizing: border-box;
+    height: 48px;
+    font: 13px/27px Roboto, Arial, sans-serif;
+    /* vertical-align: middle; */
+}
+
+.nav-links-right1 {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.circles-square {
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
+    height: 24px;
+}
+
+.right-icons {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+}
+
+.first-right-pair {
+    padding-right: 15px;
+}
+
+/* .nav-links-left {
+    padding: 15px
+} */
+
+.profile-icon {
+    background-size: 32px 32px;
+    border-radius: 50%;
+    display: block;
+    margin: 0px;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    z-index: 0;
+}
+
+
+
+/* *** Google Logo *** */
+
+/* Center Google logo and footer */
+.Google-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Google-logo-container{
+    background-color: beige;
+    min-height: 92px;
+    max-height: 290px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    height: 229px;
+    /* height: calc(100%-560px) revise? */ 
+    
+}
+
+.Google-logo-inner-container {
+    background-color: lightcoral;
+    max-height: 92px;
+    position: relative;
+    height: 100%;
+    margin-top: auto;
+}
 
 
 /* *** Search bar styling *** */
+.search-container {
+    background-color: rgb(255, 242, 127);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-inner-container {
+    background-color: #8eaaff;
+    padding: 0;
+    max-width: 584px;
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    margin: 0;
+    width: 560px;
+    height: 41px;
+}
+
+.search-item {
+    position: relative;
+    
+}
+
+.search-box {
+    flex: 1; 
+    display: flex;
+    padding: 5px 8px 0 14px;
+}
+
+.text-area-div {
+    resize: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+}
+
+textarea.search-bar {
+    font-family: Roboto,arial,sans-serif;
+    line-height: 22px;
+    margin-bottom: 8px;
+    overflow-x: hidden;
+    white-space: pre-line;
+    overflow-y: auto;
+    width: 443px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+}
+.lens-icon {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 46px;
+    padding-right: 13px;
+    margin-top: -5px;
+}
+
+.camera-icon {
+    transform: scale(0.15);
+    overflow: visible;
+}
+
+.camera-container {
+    flex: 1 0 auto;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 8px;
+    width: 24px;
+    line-height: 44px;
+}
+
+.camera-div {
+    flex: 1 0 auto;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 8px;
+    width: 24px;
+    line-height: 44px;
+}
+
+.search-buttons-div {
+    padding-top: 18px;
+}
+
+.button-styling {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: Roboto,arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
 
 
+.divisor {
+    display:block;
+    flex-grow: 1;
+}
+
+/* *** Footer styling ***  */
+
+.footer-container, .footer-header, .footer-links-left, .footer-links-right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.footer-inner-container {
+    background-color: rgb(215, 231, 248);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-container {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-header{
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+.footer-header {
+    justify-content: center;
+    order: 0;
+}
+
+.footer-links {
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+a.footer-links {
+    color: #70757a;
+}
+
+.footer-links-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 30%;
+    order: 1;
+}
+
+.footer-links-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 30%;
+    order: 3;
+}
+
+/* This is good */
+.footer-leaf-image {
+    height: 14px;
+    margin-right: 6px;
+}
 
 
 /* *** Links styling *** */
@@ -27,119 +335,6 @@ a:hover {
 }
 
 .nav-links {
-    padding: 5px;
+    /* padding: 5px; */
     color: #202124;
-}
-
-
-/* *** Other styling *** */
-.Google-logo-container, .footer-header{
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    padding: 3%;
-}
-
-/* div {
-    display: block;
-} */
-
-/* Flex items defined for top links only */
-.top-nav-container {
-    background-color: red;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 6px;
-}
-
-/* .nav-links-right {
-    display: inline-block;
-    flex-grow: 1;
-    flex-direction: row;
-} */
-
-
-.search-container {
-    background-color: aquamarine;
-    display: flex;
-    flex-flow: column wrap;
-}
-
-/* .nav-link2 {
-    margin-right: auto;
-} */
-
-
-/* .nav-link3, .nav-link4, .nav-link5 {
-    align-self: flex-end;
-} */
-
-
-.search-icon {
-    color:gray;
-    /* display: inline-block; */
-    /* fill: currentColor; */
-    height: 24px;
-    /* line-height: 24px; */
-    /* position: relative; */
-    width: 24px
-}
-
-.camera-icon {
-    transform: scale(0.20);
-}
-
-.text-area-container {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    margin-top: 6px;
-}
-
-
-/* *** Footer styling ***  */
-
-.footer-container {
-    background-color: #f2f2f2;
-    padding: 0 20px;
-}
-
-.footer-container, .footer-header, .footer-links-left, .footer-links-right {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* @media only screen and (max-width: 1200px) {
-    .footer-header {
-        order: 0;
-        width: 100%;
-        justify-content: center;
-    }
-} */
-
-.footer-header {
-    justify-content: center;
-}
-
-.footer-links {
-    display: block;
-    padding: 15px;
-    white-space: nowrap;
-}
-
-.footer-links-left {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-links-right {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* This is good */
-.footer-leaf-image {
-    height: 14px;
-    margin-right: 6px;
 }
