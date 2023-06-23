@@ -17,7 +17,7 @@ a:-webkit-any-link {
     color: #202124;
 }
 
-.top-nav-container, .Google-logo-container, .search-container, .footer-container {
+.Google-logo-container {
     flex-shrink: 0;
     box-sizing: border-box;
 }
@@ -184,6 +184,7 @@ textarea.search-bar {
     height: 35px;
     padding: 0;
     border: 0;
+    height: 27px;
 }
 .lens-icon {
     display: flex;
@@ -254,42 +255,24 @@ textarea.search-bar {
 
 /* *** Footer styling ***  */
 
-.footer-container, .footer-header, .footer-links-left, .footer-links-right {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .footer-container {
     background-color: #f2f2f2;
     padding: 0 20px;
-    justify-content: space-between;
 }
 
 .footer-inner-container {
     background-color: rgb(215, 231, 248);
+    /* padding: 0 20px; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 1200px) {
-    .footer-container {
-        justify-content: space-evenly;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .footer-header{
-        order: 0;
-        width: 100%;
-        justify-content: center;
-    }
+    justify-content: space-between;
 }
 
 
 .footer-header {
     justify-content: center;
-    order: 0;
+    order: 1;
 }
 
 .footer-links {
@@ -307,7 +290,7 @@ a.footer-links {
     flex-wrap: wrap;
     justify-content: flex-start;
     min-width: 30%;
-    order: 1;
+    order: 0;
 }
 
 .footer-links-right {
@@ -315,13 +298,34 @@ a.footer-links {
     flex-wrap: wrap;
     justify-content: flex-end;
     min-width: 30%;
-    order: 3;
+    order: 2;
 }
 
 /* This is good */
 .footer-leaf-image {
     height: 14px;
     margin-right: 6px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-inner-container {
+        justify-content: space-evenly;
+    }
+
+    .footer-links-left {
+        order: 1;
+    }
+
+    .footer-links-right {
+        order: 2;
+    }
+
+    .footer-header{
+        display: flex;
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 
