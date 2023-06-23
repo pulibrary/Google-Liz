@@ -9,7 +9,9 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
 }
 
 a:-webkit-any-link {
@@ -22,8 +24,10 @@ a:-webkit-any-link {
     box-sizing: border-box;
 }
 
+/* This is to make the main container to fill out all the space between the footer and itself. 
+This is what allows for the sticky footer. */
 div.main-container {
-    min-height: 100%;
+    flex: 1;
 }
 
 /* *** Top nav styling *** */
