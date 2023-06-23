@@ -150,14 +150,14 @@ div.main-container {
 }
 
 .search-item {
-    position: relative;
+    position:sticky;
     
 }
 
 .search-box {
     flex: 1; 
     display: flex;
-    padding: 5px 8px 0 14px;
+    padding: 3px 0 0 14px;
 }
 
 .text-area-div {
@@ -192,7 +192,7 @@ textarea.search-bar {
     width: 20px;
     height: 46px;
     padding-right: 13px;
-    margin-top: -5px;
+    margin-top: 15%;
 }
 
 .camera-icon {
@@ -200,9 +200,16 @@ textarea.search-bar {
     overflow: visible;
 }
 
-.camera-container {
-    flex: 1 0 auto;
+.mic-icon {
+    padding-bottom: 10px;
+}
+
+.mic-camera-div {
     display: flex;
+    align-items: center;
+}
+
+.camera-container {
     cursor: pointer;
     align-items: center;
     border: 0;
@@ -210,6 +217,7 @@ textarea.search-bar {
     outline: none;
     padding: 0 8px;
     width: 24px;
+    height: 44px;
     line-height: 44px;
 }
 
